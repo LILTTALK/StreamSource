@@ -5,16 +5,20 @@
 # https://telestream.force.com/kb2/articles/Knowledge_Article/Gameshow-Add-Text
 # https://www.xsplit.com/broadcaster/getting-started/adding-text
 #
+# Updated for Elite Dangerous: Odyssey and EDMC 5.0.0 and on
+#
 
 from io import open	# For Python 2&3 a version of open that supports both encoding and universal newlines
 from os.path import join
 import sys
 
 from config import config
-from companion import ship_map
+from edmc_data import ship_name_map 
 from l10n import Locale
 
-VERSION = '1.10'
+Version = '1.11.1' # Updated to  ship_map to ship_name_map removed in EDMC 5.0.0 companion.py. ship_map was included in Shiptype.py
+
+
 
 this = sys.modules[__name__]	# For holding module globals
 this.outdir = config.get('outdir')
@@ -113,11 +117,11 @@ def journal_entry(cmdr, is_beta, system, station, entry, state):
 
     if this.shiptype != state['ShipType']:
         this.shiptype = state['ShipType']
-        write_file('EDMC ShipType.txt', ship_map.get(this.shiptype, this.shiptype))
+        write_file('EDMC ShipType.txt', ship_name_map.get(this.shiptype, this.shiptype))
 
     if this.shipname != (state['ShipName'] or this.shiptype):
         this.shipname = (state['ShipName'] or this.shiptype)
-        write_file('EDMC ShipName.txt', state['ShipName'] and state['ShipName'] or ship_map.get(this.shiptype, this.shiptype))
+        write_file('EDMC ShipName.txt', state['ShipName'] and state['ShipName'] or ship_name_map.get(this.shiptype, this.shiptype))
 
 
 # Write any files with changed data
