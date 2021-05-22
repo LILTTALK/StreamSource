@@ -28,6 +28,7 @@ If the app is started while the game is not running these files hold placeholder
 
 ## License
 
-Copyright © 2019 Jonathan Harris.
+Copyright © 2019 Jonathan Harris. (Original Creator)
+Updated 2021 by LILTTALK
 
 Licensed under the [GNU Public License (GPL)](http://www.gnu.org/licenses/gpl-2.0.html) version 2 or later.
