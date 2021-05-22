@@ -5,7 +5,7 @@ This plugin outputs status info from the game [Elite Dangerous](https://www.elit
 ## Installation
 
 * On EDMC's Plugins settings tab press the “Open” button. This reveals the `plugins` folder where EDMC looks for plugins.
-* Download the [latest release](https://github.com/Marginal/StreamSource/releases/latest).
+* Download the [latest release](https://github.com/LILTTALK/StreamSource/releases/latest).
 * Open the `.zip` archive that you downloaded and move the `StreamSource` folder contained inside into the `plugins` folder.
 
 You will need to re-start EDMC for it to notice the new plugin.
